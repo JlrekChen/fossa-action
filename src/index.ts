@@ -35,8 +35,8 @@ export async function analyze(): Promise<void> {
     cmd,
     ...getEndpointArgs(),
     ...getBranchArgs(),
-	...getTeamNameArgs(),
-	...getProjectNameArgs(),
+    ...getTeamNameArgs(),
+    ...getProjectNameArgs(),
     DEBUG ? '--debug' : null,
   ].filter(arg => arg);
 
