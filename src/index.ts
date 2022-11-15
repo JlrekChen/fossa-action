@@ -21,12 +21,22 @@ export async function analyze(): Promise<void> {
     '--branch',
     BRANCH,
   ];
+  const getTeamNameArgs = (): string[] => !TEAM-NAME ? [] : [
+    '-T',
+    TEAM-NAME,
+  ];
+  const getProjectNameArgs = (): string[] => !PROJECT-NAME ? [] : [
+    '-p',
+    PROJECT-NAME,
+  ];
 
   const getArgs = (cmd: string) => [
     CONTAINER ? 'container' : null,
     cmd,
     ...getEndpointArgs(),
     ...getBranchArgs(),
+	...getTeamNameArgs(),
+	...getProjectNameArgs(),
     DEBUG ? '--debug' : null,
   ].filter(arg => arg);
 
