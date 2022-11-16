@@ -7,6 +7,8 @@ import {
   ENDPOINT,
   BRANCH,
   DEBUG,
+  TEAM_NAME,
+  PROJECT_NAME,
 } from './config';
 import { fetchFossaCli } from './download-cli';
 
@@ -21,13 +23,13 @@ export async function analyze(): Promise<void> {
     '--branch',
     BRANCH,
   ];
-  const getTeamNameArgs = (): string[] => !TEAM-NAME ? [] : [
+  const getTeamNameArgs = (): string[] => !TEAM_NAME ? [] : [
     '-T',
-    TEAM-NAME,
+    TEAM_NAME,
   ];
-  const getProjectNameArgs = (): string[] => !PROJECT-NAME ? [] : [
+  const getProjectNameArgs = (): string[] => !PROJECT_NAME ? [] : [
     '-p',
-    PROJECT-NAME,
+    PROJECT_NAME,
   ];
 
   const getArgs = (cmd: string) => [

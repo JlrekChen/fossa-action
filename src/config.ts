@@ -13,5 +13,5 @@ export const RUN_TESTS = getBooleanInput('run-tests', {required: false});
 export const ENDPOINT = getInput('endpoint', getInputOptions());
 export const BRANCH = getInput('branch', getInputOptions());
 export const DEBUG = getBooleanInput('debug', {required: false});
-export const TEAM-NAME = getInput('team-name', getInputOptions());
-export const PROJECT-NAME = getInput('project-name', getInputOptions());
+export const TEAM_NAME = getInput('team-name', getInputOptions());
+export const PROJECT_NAME = getInput('project-name', getInputOptions());
