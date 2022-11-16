@@ -33,11 +33,11 @@ inputs:
   team-name:
     description: >-
       FOSSA Team Name.
-    default: false
+    required: false
   project-name:
     description: >-
       FOSSA Project Name.
-    default: false
+    required: false
 
 runs:
   using: node16
